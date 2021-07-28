@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myfirstprogram
+  labels:
+    role: myrole
+spec:
+  containers:
+    - name: myfirstcontainer
+      image: jimdevops/my-repo:my_python_svc

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonsvc-deployment
+  labels:
+    app: python-svc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-svc
+  template:
+    metadata:
+      labels:
+        app: python-svc
+    spec:
+      containers:
+      - name: python-svc
+        image: jimdevops/my-repo:my_python_svc
